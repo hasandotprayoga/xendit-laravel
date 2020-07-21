@@ -1,12 +1,16 @@
 {
     "name": "hasandotprayoga/xendit",
+    "type": "library",
+    "keywords": ["php","payment","xendit"],
+    "license": "Apache-2.0",
+    "homepage": "https://github.com/hasandotprayoga/xendit-laravel",
     "authors": [
         {
             "name": "hasan",
             "email": "hasandotprayoga@gmail.com"
         }
     ],
-    "description": "Xendit library",
+    "description": "Laravel xendit library",
     "require": {
         "php": ">=7.2.0",
         "guzzlehttp/guzzle": "~6.0"
