@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace Hasandotprayoga\Xendit;
 
@@ -21,11 +21,11 @@ class Xendit
         if ($params && !is_array($params)) {
             $message = "You must pass an array as params.";
             throw new InvalidArgumentException($message);
-        }else{
+        } else {
             $currParams = array_diff_key(array_flip($requiredParams), $params);
             if (count($currParams) > 0) {
                 $message = "You must pass required parameters on your params. "
-                . "Check https://xendit.github.io/apireference/ for more information.";
+                    . "Check https://xendit.github.io/apireference/ for more information.";
                 throw new InvalidArgumentException($message);
             }
         }
@@ -49,8 +49,7 @@ class Xendit
             $rcode = (int) $requestClient->getStatusCode();
             $rheader = $requestClient->getHeaders();
 
-            return json_decode($rbody->getContents(),true);
-
+            return json_decode($rbody->getContents(), true);
         } catch (\GuzzleHttp\Exception\RequestException $e) {
 
             $response = $e->getResponse();
@@ -62,7 +61,6 @@ class Xendit
                 strval($rcode),
                 $rbody['error_code'],
             );
-        
         }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Hasandotprayoga\Xendit\Traits;
 
-trait Create 
+trait Create
 {
     public function create($params = [])
     {
